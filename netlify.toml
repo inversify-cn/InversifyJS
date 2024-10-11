@@ -1,8 +1,8 @@
 # example netlify.toml
 [build]
-  command = "npm i gitbook-cli -g&&gitbook build wiki"
+  command = "npm i &&npm run build"
   functions = "functions"
-  publish = "wiki/_book"
+  publish = "_book"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.

@@ -14,7 +14,11 @@
     "publish-please": "publish-please",
     "prepublish": "publish-please guard",
     "update": "updates --update --minor && npm install",
-    "postupdate": "git diff-files --quiet package-lock.json || npm test"
+    "postupdate": "git diff-files --quiet package-lock.json || npm test",
+    "build": "gitbook install && gitbook build",
+    "verify-build": "(cd _book && python3 -m http.server)",
+    "serve": "gitbook install && gitbook serve",
+    "postinstall": "(sed -i.bak '62,64d' node_modules/npm/node_modules/graceful-fs/polyfills.js || echo done) "
   },
   "repository": {
     "type": "git",
@@ -82,5 +86,9 @@
     "updates": "^10.3.5",
     "vinyl-buffer": "1.0.1",
     "vinyl-source-stream": "2.0.0"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-theme-jeff-tian": "^1.2.11"
   }
 }

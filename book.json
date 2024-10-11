@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "-theme-default",
+    "theme-jeff-tian@1.2.11"
+  ],
+  "sortedBy": ".",
+  "title": "InversifyJS 文档",
+  "root": "wiki"
+}
